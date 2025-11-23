@@ -78,25 +78,25 @@ class ImageEditor:
         
         # Brightness control
         ttk.Label(control_frame, text="Ljusstyrka:").grid(row=1, column=0, padx=5, pady=5, sticky=tk.W)
+        self.brightness_label = ttk.Label(control_frame, text="1.0")
+        self.brightness_label.grid(row=1, column=3, padx=5, pady=5)
         self.brightness_scale = ttk.Scale(
             control_frame, from_=0.5, to=2.0, orient=tk.HORIZONTAL,
             command=self.on_brightness_change, length=150
         )
         self.brightness_scale.set(1.0)
         self.brightness_scale.grid(row=1, column=1, columnspan=2, padx=5, pady=5, sticky=(tk.W, tk.E))
-        self.brightness_label = ttk.Label(control_frame, text="1.0")
-        self.brightness_label.grid(row=1, column=3, padx=5, pady=5)
         
         # Contrast control
         ttk.Label(control_frame, text="Kontrast:").grid(row=2, column=0, padx=5, pady=5, sticky=tk.W)
+        self.contrast_label = ttk.Label(control_frame, text="1.0")
+        self.contrast_label.grid(row=2, column=3, padx=5, pady=5)
         self.contrast_scale = ttk.Scale(
             control_frame, from_=0.5, to=2.0, orient=tk.HORIZONTAL,
             command=self.on_contrast_change, length=150
         )
         self.contrast_scale.set(1.0)
         self.contrast_scale.grid(row=2, column=1, columnspan=2, padx=5, pady=5, sticky=(tk.W, tk.E))
-        self.contrast_label = ttk.Label(control_frame, text="1.0")
-        self.contrast_label.grid(row=2, column=3, padx=5, pady=5)
         
         # Image display area
         image_frame = ttk.LabelFrame(main_frame, text="Bild", padding="10")
