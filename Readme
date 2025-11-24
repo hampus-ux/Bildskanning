@@ -1,1 +1,111 @@
-print("Hello world)
+# Bildskanning - Image Handling Program
+
+Ett enkelt program för att konvertera och redigera negativa bilder från DSLR-skanning till positiva bilder.
+
+## Funktioner
+
+- **Importera bilder**: Stöd för JPG, PNG, BMP, TIFF och andra vanliga bildformat
+- **Konvertera negativ till positiv**: Invertera färger med ett enda klick
+- **Justera ljusstyrka**: Reglage från 0.5x till 2.0x
+- **Justera kontrast**: Reglage från 0.5x till 2.0x
+- **Återställ justeringar**: Återgå till originalinställningar
+- **Spara bearbetade bilder**: Exportera till JPG, PNG eller TIFF
+- **Enkelt grafiskt gränssnitt**: Intuitivt och användarvänligt
+
+## Installation
+
+1. Installera Python 3.7 eller senare
+2. Installera systemkrav (Linux/Ubuntu):
+   ```bash
+   sudo apt-get install python3-tk
+   ```
+3. Installera Python-beroenden:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Användning
+
+Kör programmet med:
+
+```bash
+python bildskanning.py
+```
+
+eller gör filen körbar:
+
+```bash
+chmod +x bildskanning.py
+./bildskanning.py
+```
+
+### Grundläggande arbetsflöde:
+
+1. **Ladda en bild**
+   - Klicka på "Ladda Bild" eller använd menyn Fil → Öppna bild
+   - Välj din negativa bild från DSLR-skanning
+
+2. **Konvertera till positiv**
+   - Klicka på "Konvertera till Positiv" för att invertera bilden
+   - Bilden konverteras omedelbart från negativ till positiv
+
+3. **Justera bilden** (valfritt)
+   - Använd ljusstyrkereglaget för att göra bilden ljusare eller mörkare
+   - Använd kontrastreglaget för att justera kontrasten
+   - Klicka "Applicera" efter varje justering
+   - Använd "Återställ" för att återgå till standardinställningar
+
+4. **Spara bilden**
+   - Klicka på "Spara Bild" eller använd menyn Fil → Spara bild
+   - Välj önskat filformat (JPG, PNG, TIFF)
+   - Ange filnamn och plats
+
+### Genvägar i menyn:
+
+- **Fil → Öppna bild**: Ladda en ny bild
+- **Fil → Spara bild**: Spara den aktuella bilden
+- **Fil → Avsluta**: Stäng programmet
+
+## Krav
+
+- Python 3.7+
+- Pillow (PIL) 10.0.0+
+- tkinter (ingår vanligtvis med Python, men kan behöva installeras separat på Linux)
+
+## Programstruktur
+
+```
+Bildskanning/
+├── bildskanning.py      # Huvudprogrammet
+├── requirements.txt     # Python-beroenden
+├── Readme              # Denna fil
+└── .gitignore          # Git-ignorerade filer
+```
+
+## Hur det fungerar
+
+Programmet använder PIL (Python Imaging Library) för bildbehandling:
+
+- **Negativ till positiv konvertering**: Använder `ImageOps.invert()` för att invertera RGB-färger
+- **Ljusstyrka**: Använder `ImageEnhance.Brightness()` för att justera ljusstyrkan
+- **Kontrast**: Använder `ImageEnhance.Contrast()` för att justera kontrasten
+- **GUI**: Byggt med tkinter för en enkel och plattformsoberoende lösning
+
+## Utveckling
+
+Detta är en MVP (Minimum Viable Product) för att testa konceptet. Framtida förbättringar kan inkludera:
+
+- Batch-bearbetning av flera bilder
+- Fler justeringsmöjligheter (färgbalans, skärpa, etc.)
+- Histogram-visning
+- Beskärning och rotering
+- Förhandsvisning av före/efter
+- Metadata-hantering (EXIF-data)
+
+## Licens
+
+Open source - fri att använda och modifiera.
+
+## Support
+
+För frågor eller problem, öppna ett issue på GitHub.
