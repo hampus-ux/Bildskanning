@@ -1,0 +1,1 @@
+# Bildskanning - Batch Image Editor
