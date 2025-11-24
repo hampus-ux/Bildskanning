@@ -1,1 +1,53 @@
-print("Hello world)
+# Bildskanning - Batch Image Editor
+
+Ett verktyg för att redigera många bilder samtidigt i olika grupperingar.
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Användning
+
+### Ändra storlek på bilder
+
+```bash
+# Med pixelvärden
+python main.py resize --input ./bilder --output ./resultat --width 800 --height 600
+
+# Med procent
+python main.py resize --input ./bilder --output ./resultat --percentage 50
+```
+
+### Rotera bilder
+
+```bash
+python main.py rotate --input ./bilder --output ./resultat --degrees 90
+```
+
+### Konvertera till gråskala
+
+```bash
+python main.py grayscale --input ./bilder --output ./resultat
+```
+
+### Justera ljusstyrka
+
+```bash
+# 1.5 = 50% ljusare, 0.5 = 50% mörkare
+python main.py brightness --input ./bilder --output ./resultat --factor 1.5
+```
+
+### Justera kontrast
+
+```bash
+python main.py contrast --input ./bilder --output ./resultat --factor 1.3
+```
+
+## Kör tester
+
+```bash
+pip install pytest
+pytest tests/
+```
