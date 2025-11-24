@@ -1,0 +1,88 @@
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Bildskanning - Negativ till Positiv                                    ▭ ▢ ✕ │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Fil                                                                         │
+│ ├── Öppna bild...                                                           │
+│ ├── Spara bild...                                                           │
+│ ├── ─────────                                                               │
+│ └── Avsluta                                                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌───────────────────────────────────┐  ┌──────────────────────────────┐   │
+│  │                                   │  │       Kontroller             │   │
+│  │                                   │  ├──────────────────────────────┤   │
+│  │                                   │  │                              │   │
+│  │                                   │  │  ┌────────────────────────┐  │   │
+│  │                                   │  │  │    Ladda Bild          │  │   │
+│  │        Bildområde                 │  │  └────────────────────────┘  │   │
+│  │                                   │  │                              │   │
+│  │    (Bilden visas här efter        │  │  ┌────────────────────────┐  │   │
+│  │     laddning)                     │  │  │ Konvertera till Positiv│  │   │
+│  │                                   │  │  └────────────────────────┘  │   │
+│  │                                   │  │                              │   │
+│  │                                   │  │  ┌─ Ljusstyrka ───────────┐  │   │
+│  │                                   │  │  │        1.0             │  │   │
+│  │                                   │  │  │  ├─────●─────────────┤ │  │   │
+│  │                                   │  │  │  0.5      1.0     2.0  │  │   │
+│  │                                   │  │  │  ┌──────────────────┐ │  │   │
+│  │                                   │  │  │  │    Applicera     │ │  │   │
+│  │                                   │  │  │  └──────────────────┘ │  │   │
+│  │                                   │  │  └────────────────────────┘  │   │
+│  │                                   │  │                              │   │
+│  │                                   │  │  ┌─ Kontrast ─────────────┐  │   │
+│  │                                   │  │  │        1.0             │  │   │
+│  │                                   │  │  │  ├─────●─────────────┤ │  │   │
+│  │                                   │  │  │  0.5      1.0     2.0  │  │   │
+│  │                                   │  │  │  ┌──────────────────┐ │  │   │
+│  │                                   │  │  │  │    Applicera     │ │  │   │
+│  │                                   │  │  │  └──────────────────┘ │  │   │
+│  │                                   │  │  └────────────────────────┘  │   │
+│  │                                   │  │                              │   │
+│  │                                   │  │  ┌────────────────────────┐  │   │
+│  │                                   │  │  │      Återställ         │  │   │
+│  │                                   │  │  └────────────────────────┘  │   │
+│  │                                   │  │                              │   │
+│  │                                   │  │  ┌────────────────────────┐  │   │
+│  └───────────────────────────────────┘  │  │      Spara Bild        │  │   │
+│                                          │  └────────────────────────┘  │   │
+│                                          └──────────────────────────────┘   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Välkommen till Bildskanning                                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Gränssnittslayout - Bildskanning Application
+
+VÄNSTER PANEL (Bildbild):
+- Stor displayområde för bilden
+- Automatisk storleksanpassning
+- Behåller bildproportioner
+- Visar text "Ingen bild laddad" innan bild laddas
+
+HÖGER PANEL (Kontroller):
+Top till botten:
+
+1. LADDA BILD - Knapp
+   └─ Öppnar filväljare för att importera bild
+
+2. KONVERTERA TILL POSITIV - Knapp
+   └─ Växlar mellan negativ och positiv
+   └─ Ändrar text när konverterad
+
+3. LJUSSTYRKA - Ramad sektion
+   ├─ Värdevisning (1.0 default)
+   ├─ Horisontellt reglage (0.5 - 2.0)
+   └─ Applicera-knapp
+
+4. KONTRAST - Ramad sektion
+   ├─ Värdevisning (1.0 default)
+   ├─ Horisontellt reglage (0.5 - 2.0)
+   └─ Applicera-knapp
+
+5. ÅTERSTÄLL - Knapp
+   └─ Återställer ljusstyrka och kontrast till 1.0
+
+6. SPARA BILD - Knapp
+   └─ Öppnar filväljare för att spara resultat
+
+NEDERST:
+- Statusrad som visar meddelanden och filnamn
