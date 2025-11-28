@@ -1,0 +1,40 @@
+{
+  "name": "analoga-desktop",
+  "productName": "Analoga",
+  "version": "1.0.0",
+  "description": "Professional Film Negative Conversion Tool",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "app": "electron .",
+    "start:desktop": "npm run build && electron .",
+    "make": "electron-builder"
+  },
+  "author": "You",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "electron": "^25.0.0",
+    "electron-builder": "^24.4.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9"
+  },
+  "build": {
+    "appId": "com.analoga.app",
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "directories": {
+      "output": "out"
+    }
+  }
+}

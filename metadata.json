@@ -1,0 +1,5 @@
+{
+  "name": "Analoga",
+  "description": "A browser-based implementation of a film negative conversion pipeline with Frontier-style color science controls.",
+  "requestFramePermissions": []
+}
