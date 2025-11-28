@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test output files
+test_output_*.jpg
+test_output_*.png
+demo_workflow.jpg
+feature_showcase.jpg
+
+# Test images (optional - uncomment if you don't want to commit test images)
+# *.jpg
+# *.jpeg
+# *.png
+# *.tiff
+# *.tif
